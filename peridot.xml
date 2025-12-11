@@ -23,6 +23,12 @@
              remote="zenin"
              revision="lineage-23.1" />
 
+    <!-- Dolby Atmos -->
+    <project path="vendor/dolby"
+             name="vendor_dolby"
+             remote="zenin"
+             revision="lineage-23.1" />
+
     <!-- Kernel Source -->
     <project path="kernel/xiaomi/sm8635"
              name="kernel_xiaomi_sm8635"
