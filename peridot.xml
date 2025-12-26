@@ -1,49 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <!-- Remotes -->
-    <remote name="zenin"
-            fetch="https://github.com/sm8635-dev"
-            clone-depth="1" />
+  <remote name="powerhouse" fetch="https://github.com/Powerhouse-Lab" revision="yaap-qpr2" />
+  <remote name="github" fetch="https://github.com" />
+  <remote name="f6-test" fetch="https://github.com/F6-test" />
 
-    <!-- Device Tree -->
-    <project path="device/xiaomi/peridot"
-             name="device_xiaomi_peridot"
-             remote="zenin"
-             revision="yaap-qpr2" />
+  <project path="vendor/xiaomi/peridot" name="proprietary_vendor_xiaomi_peridot" remote="powerhouse" groups="device,xiaomi" />
+  <project path="kernel/xiaomi/sm8635" name="android_kernel_xiaomi_sm8635" remote="powerhouse" />
+  <project path="kernel/xiaomi/sm8635-modules" name="android_kernel_xiaomi_sm8635-modules" remote="powerhouse" revision="lineage-23.0" />
+  <project path="kernel/xiaomi/sm8635-devicetrees" name="android_kernel_xiaomi_sm8635-devicetrees" remote="powerhouse" revision="lineage-23.0" />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="powerhouse" />
+  
+  <project path="packages/apps/FastCharge" name="packages_apps_FastCharge" remote="powerhouse" revision="fastcharge" />
+  <project path="packages/apps/KProfiles" name="packages_apps_KProfiles" remote="powerhouse" revision="lineage-23.0" />
 
-    <!-- Kernel Source -->
-    <project path="kernel/xiaomi/sm8635"
-             name="kernel_xiaomi_sm8635"
-             remote="zenin"
-             revision="lineage-23.0" />
+  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/agm" />
+  <project path="hardware/qcom-caf/sm8650/audio/agm" name="sm8635-dev/vendor_qcom_opensource_agm" remote="github" revision="lineage-23.2-caf-sm8650" />
 
-    <project path="kernel/xiaomi/sm8635-devicetrees"
-             name="kernel_xiaomi_sm8635-devicetrees"
-             remote="zenin"
-             revision="lineage-23.0" />
+  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/graphservices" />
+  <project path="hardware/qcom-caf/sm8650/audio/graphservices" name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" remote="github" revision="lineage-23.2-caf-sm8650" />
 
-    <project path="kernel/xiaomi/sm8635-modules"
-             name="kernel_xiaomi_sm8635-modules"
-             remote="zenin"
-             revision="lineage-23.0" />
+  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/pal" />
+  <project path="hardware/qcom-caf/sm8650/audio/pal" name="LineageOS/android_vendor_qcom_opensource_arpal-lx" remote="github" revision="lineage-23.2-caf-sm8650" />
 
-    <!-- Vendor Blobs -->
-    <project path="vendor/xiaomi/peridot"
-             name="vendor_xiaomi_peridot"
-             remote="zenin"
-             revision="yaap-qpr2" />
+  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/primary-hal" />
+  <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" remote="github" revision="lineage-23.2-caf-sm8650" />
 
-    <!-- HALs and Policies -->
-    <project path="hardware/xiaomi"
-             name="hardware_xiaomi"
-             remote="zenin"
-             revision="yaap-qpr2" />
+  <remove-project name="platform/hardware/lineage/interfaces" />
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces-yaap" remote="f6-test" revision="sixteen" />
 
-    <!-- Apps -->
-    <project path="packages/apps/FastCharge"
-             name="packages_apps_FastCharge"
-             remote="zenin"
-             revision="fastcharge" />
+  <remove-project name="platform/device/lineage/sepolicy" />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy-yaap" remote="f6-test" revision="sixteen" />
 
 </manifest>
