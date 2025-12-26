@@ -1,4 +1,4 @@
-sm8635-dev
+Powerhouse-lab
 ===========
 
 Getting started
