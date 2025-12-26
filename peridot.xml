@@ -45,10 +45,4 @@
              remote="github"
              clone-depth="1" />
 
-    <project path="packages/apps/KProfiles"
-             name="Powerhouse-Lab/packages_apps_KProfiles"
-             revision="lineage-23.0"
-             remote="github"
-             clone-depth="1" />
-
 </manifest>
