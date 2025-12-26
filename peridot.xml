@@ -1,35 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="powerhouse" fetch="https://github.com/Powerhouse-Lab" revision="yaap-qpr2" />
-  <remote name="github" fetch="https://github.com" />
-  <remote name="f6-test" fetch="https://github.com/F6-test" />
+    <!-- ================= REMOTES ================= -->
+    <remote name="github"
+            fetch="https://github.com/" />
 
-  <project path="vendor/xiaomi/peridot" name="proprietary_vendor_xiaomi_peridot" remote="powerhouse" groups="device,xiaomi" />
-  <project path="kernel/xiaomi/sm8635" name="android_kernel_xiaomi_sm8635" remote="powerhouse" />
-  <project path="kernel/xiaomi/sm8635-modules" name="android_kernel_xiaomi_sm8635-modules" remote="powerhouse" revision="lineage-23.0" />
-  <project path="kernel/xiaomi/sm8635-devicetrees" name="android_kernel_xiaomi_sm8635-devicetrees" remote="powerhouse" revision="lineage-23.0" />
-  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="powerhouse" />
-  
-  <project path="packages/apps/FastCharge" name="packages_apps_FastCharge" remote="powerhouse" revision="fastcharge" />
-  <project path="packages/apps/KProfiles" name="packages_apps_KProfiles" remote="powerhouse" revision="lineage-23.0" />
+    <!-- ================= VENDOR ================= -->
+    <project path="vendor/xiaomi/peridot"
+             name="Powerhouse-Lab/proprietary_vendor_xiaomi_peridot"
+             revision="yaap-qpr2"
+             remote="github"
+             clone-depth="1" />
 
-  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/agm" />
-  <project path="hardware/qcom-caf/sm8650/audio/agm" name="sm8635-dev/vendor_qcom_opensource_agm" remote="github" revision="lineage-23.2-caf-sm8650" />
+    <!-- ================= KERNEL ================= -->
+    <project path="kernel/xiaomi/sm8635"
+             name="Powerhouse-Lab/android_kernel_xiaomi_sm8635"
+             revision="yaap-qpr2"
+             remote="github"
+             clone-depth="1" />
 
-  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/graphservices" />
-  <project path="hardware/qcom-caf/sm8650/audio/graphservices" name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" remote="github" revision="lineage-23.2-caf-sm8650" />
+    <project path="kernel/xiaomi/sm8635-modules"
+             name="Powerhouse-Lab/android_kernel_xiaomi_sm8635-modules"
+             revision="lineage-23.0"
+             remote="github"
+             clone-depth="1" />
 
-  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/pal" />
-  <project path="hardware/qcom-caf/sm8650/audio/pal" name="LineageOS/android_vendor_qcom_opensource_arpal-lx" remote="github" revision="lineage-23.2-caf-sm8650" />
+    <project path="kernel/xiaomi/sm8635-devicetrees"
+             name="Powerhouse-Lab/android_kernel_xiaomi_sm8635-devicetrees"
+             revision="lineage-23.0"
+             remote="github"
+             clone-depth="1" />
 
-  <remove-project name="platform/hardware/qcom-caf/sm8650/audio/primary-hal" />
-  <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" remote="github" revision="lineage-23.2-caf-sm8650" />
+    <!-- ================= HARDWARE ================= -->
+    <project path="hardware/xiaomi"
+             name="Powerhouse-Lab/android_hardware_xiaomi"
+             revision="yaap-qpr2"
+             remote="github"
+             clone-depth="1" />
 
-  <remove-project name="platform/hardware/lineage/interfaces" />
-  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces-yaap" remote="f6-test" revision="sixteen" />
+    <!-- ================= APPS ================= -->
+    <project path="packages/apps/FastCharge"
+             name="Powerhouse-Lab/packages_apps_FastCharge"
+             revision="fastcharge"
+             remote="github"
+             clone-depth="1" />
 
-  <remove-project name="platform/device/lineage/sepolicy" />
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy-yaap" remote="f6-test" revision="sixteen" />
+    <project path="packages/apps/KProfiles"
+             name="Powerhouse-Lab/packages_apps_KProfiles"
+             revision="lineage-23.0"
+             remote="github"
+             clone-depth="1" />
 
 </manifest>
