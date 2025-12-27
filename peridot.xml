@@ -5,6 +5,13 @@
     <remote name="github"
             fetch="https://github.com/" />
 
+    <!-- ================= Device-trees ================= -->
+    <project path="device/xiaomi/peridot"
+             name="Powerhouse-Lab/android_device_xiaomi_peridot"
+             revision="yaap-qpr2"
+             remote="github"
+             clone-depth="1" />    
+
     <!-- ================= VENDOR ================= -->
     <project path="vendor/xiaomi/peridot"
              name="Powerhouse-Lab/proprietary_vendor_xiaomi_peridot"
