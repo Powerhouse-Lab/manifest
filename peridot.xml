@@ -1,58 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <!-- Remotes & Defaults -->
-    <remote name="zenin"
-            fetch="https://github.com/sm8635-dev"
-            clone-depth="1" />
-    <default remote="zenin"
-             revision="lineage-23.2" />
+    <!-- ================= REMOTES ================= -->
+    <remote name="github"
+            fetch="https://github.com/" />
 
-    <!-- Camera -->
-    <project path="device/xiaomi/peridot-miuicamera"
-             name="device_xiaomi_peridot-miuicamera"
-             remote="zenin" />
-
-    <project path="vendor/xiaomi/peridot-miuicamera"
-             name="vendor_xiaomi_peridot-miuicamera"
-             remote="zenin" />
-
-    <!-- Device Tree -->
+    <!-- ================= Device-trees ================= -->
     <project path="device/xiaomi/peridot"
-             name="device_xiaomi_peridot"
-             remote="zenin" />
+             name="Powerhouse-Lab/android_device_xiaomi_peridot"
+             revision="vos-qpr2"
+             remote="github"
+             clone-depth="1" />    
 
-    <!-- Dolby Atmos -->
-    <project path="vendor/dolby"
-             name="vendor_dolby"
-             remote="zenin" />
+    <!-- ================= VENDOR ================= -->
+    <project path="vendor/xiaomi/peridot"
+             name="Powerhouse-Lab/proprietary_vendor_xiaomi_peridot"
+             revision="vos-qpr2"
+             remote="github"
+             clone-depth="1" />
 
-    <!-- Kernel Source -->
+    <!-- ================= KERNEL ================= -->
     <project path="kernel/xiaomi/sm8635"
-             name="kernel_xiaomi_sm8635"
-             remote="zenin" />
-
-    <project path="kernel/xiaomi/sm8635-devicetrees"
-             name="kernel_xiaomi_sm8635-devicetrees"
-             remote="zenin" />
+             name="Powerhouse-Lab/android_kernel_xiaomi_sm8635"
+             revision="vos-qpr2"
+             remote="github"
+             clone-depth="1" />
 
     <project path="kernel/xiaomi/sm8635-modules"
-             name="kernel_xiaomi_sm8635-modules"
-             remote="zenin" />
+             name="Powerhouse-Lab/android_kernel_xiaomi_sm8635-modules"
+             revision="lineage-23.0"
+             remote="github"
+             clone-depth="1" />
 
-    <!-- Vendor Blobs -->
-    <project path="vendor/xiaomi/peridot"
-             name="vendor_xiaomi_peridot"
-             remote="zenin" />
-
-    <!-- HALs and Policies -->
-    <project path="hardware/xiaomi"
-             name="hardware_xiaomi"
-             remote="zenin" />
-
-    <!-- Apps -->
-    <project path="packages/apps/KProfiles"
-             name="packages_apps_KProfiles"
-             remote="zenin" />
+    <project path="kernel/xiaomi/sm8635-devicetrees"
+             name="Powerhouse-Lab/android_kernel_xiaomi_sm8635-devicetrees"
+             revision="lineage-23.0"
+             remote="github"
+             clone-depth="1" />
 
 </manifest>
