@@ -5,12 +5,22 @@
     <remote name="github"
             fetch="https://github.com/" />
 
-    <!-- ================= Device-trees ================= -->
+    <remote name="gitlab"
+            fetch="https://gitlab.com/" />
+
+    <!-- ================= DEVICE TREE ================= -->
     <project path="device/xiaomi/peridot"
              name="Powerhouse-Lab/android_device_xiaomi_peridot"
              revision="seventeen"
              remote="github"
-             clone-depth="1" />   
+             clone-depth="1" />
+
+    <!-- ================= VENDOR ================= -->
+    <project path="vendor/xiaomi/peridot"
+             name="NoPrincessHere/proprietary_vendor_xiaomi_peridot"
+             revision="seventeen"
+             remote="gitlab"
+             clone-depth="1" />
 
     <!-- ================= KERNEL ================= -->
     <project path="kernel/xiaomi/sm8635"
@@ -30,11 +40,18 @@
              revision="seventeen"
              remote="github"
              clone-depth="1" />
-   <!-- ================= Hardware/Xiaomi ================= -->
-    <project path="hardware/xiaomi"
-             name="Powerhouse-Lab/android_hardware_xiaomi"
+
+    <!-- ================= MIUI CAMERA ================= -->
+    <project path="device/xiaomi/peridot-miuicamera"
+             name="PixelOS-Devices/android_device_xiaomi_peridot-miuicamera"
              revision="seventeen"
              remote="github"
              clone-depth="1" />
-    
+
+    <project path="vendor/xiaomi/peridot-miuicamera"
+             name="NoPrincessHere/proprietary_vendor_xiaomi_peridot-miuicamera"
+             revision="seventeen"
+             remote="gitlab"
+             clone-depth="1" />
+
 </manifest>
