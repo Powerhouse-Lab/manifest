@@ -5,7 +5,7 @@
     <remote name="github"
             fetch="https://github.com/" />
 
-    <remote name="gitlab"
+    <remote name="gitlab_peridot"
             fetch="https://gitlab.com/" />
 
     <!-- ================= DEVICE TREE ================= -->
@@ -19,7 +19,7 @@
     <project path="vendor/xiaomi/peridot"
              name="NoPrincessHere/proprietary_vendor_xiaomi_peridot"
              revision="seventeen"
-             remote="gitlab"
+             remote="gitlab_peridot"
              clone-depth="1" />
 
     <!-- ================= KERNEL ================= -->
@@ -51,7 +51,7 @@
     <project path="vendor/xiaomi/peridot-miuicamera"
              name="NoPrincessHere/proprietary_vendor_xiaomi_peridot-miuicamera"
              revision="seventeen"
-             remote="gitlab"
+             remote="gitlab_peridot"
              clone-depth="1" />
 
 </manifest>
